@@ -1,15 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import {
+  SiInstagram,
+  SiLinkedin,
+  SiTwitter,
+  SiGmail,
+  SiGithub,
+} from 'react-icons/si';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+<Layout title="Dmitry Krasnov homepage">
+  <main>
+    <h1>
+      Hello there 👋 My name is <span class="text-gradient">Dmitry Krasnov</span
+      >
+    </h1>
+
+    <div class="instructions">
+      <p>I am a <strong>software developer</strong> from San Diego, CA 🇺🇸</p>
+
+      <p>
+        I love creating web 🧑‍💻 applications with JavaScript tech stack, based on <strong
+          >TypeScript</strong
+        > and <strong>React</strong> with backends powered by <strong
+          >Node.js</strong
+        > and <strong>Express</strong> framework.
+      </p>
+
+      <p>
+        I'm constantly improving 💪 my development skills to deliver <strong
+          >modern</strong
+        >, <strong>performant</strong> and <strong>accessible</strong> web applications.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-centered">
+        There are some social links, please let me know!
+      </p>
+
+      <ul class={'socials-list'}>
+        <li class="social-item">
+          <a
+            href={'https://www.instagram.com/thawebwelost/'}
+            target={'_blank'}
+            rel={'noreferrer'}
+          >
+            <SiInstagram color={'#E4405F'} />
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            href={'https://www.linkedin.com/in/dmitry-krasnov-816a92112/'}
+            target={'_blank'}
+            rel={'noreferrer'}
+          >
+            <SiLinkedin color={'#0A66C2'} />
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            href={'https://twitter.com/thewebwelost'}
+            target={'_blank'}
+            rel={'noreferrer'}
+          >
+            <SiTwitter color={'#1DA1F2'} />
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            href={'mailto:thawebwelost@gmail.com'}
+            target={'_blank'}
+            rel={'noreferrer'}
+          >
+            <SiGmail color={'#EA4335'} />
+          </a>
+        </li>
+        <li>
+          <a
+            href={'https://github.com/thewebwelost'}
+            target={'_blank'}
+            rel={'noreferrer'}
+          >
+            <SiGithub color={'#181717'} />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -31,51 +110,67 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
-	</main>
+		</ul> -->
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions p {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .socials-list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social-item {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
 </style>
